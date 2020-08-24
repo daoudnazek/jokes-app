@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    
+    <% jokes.forEach(joke => {%>
+        <li>
+            <h2><%= joke.type%> </h2>
+            <h2><%= joke.setup%></h2>
+            <h2><%= joke.punchline%></h2>
+            
+            <form action="detail/<%= joke.id %>?_method=PUT" method="POST">
+                <label for="type"><input type="text" id="type" name="type" value="<%= book.type%>">Type</label>
+                <label for="setup"><input type="text" id="setup" name="setup" value="<%= book.setup %>"></label>
+                <label for="punchline"><input type="text" id="punchline" name="punchline" value="<%= book.punchline %>"></label>
+                <input type="submit" value="Edit joke">
+            </form>
+
+            <form action="detail/<%= joke.id %>?_method=DELETE" method="POST">
+                <button type="submit"> Delete</button>
+            </form>
+
+
+
+        </li>
+    <%})%>
+
+</body>
+</html>

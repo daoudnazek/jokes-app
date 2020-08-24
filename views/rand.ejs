@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    
+        <li>
+            <h2><%= joke.type%> </h2>
+            <h2><%= joke.setup%></h2>
+            <h2><%= joke.punchline%></h2>
+            <form action="fav" method="POST">
+                <input type="submit" name="addtofav"  value="Add to Favourit List">
+            </form>
+        </li>
+
+</body>
+</html>
